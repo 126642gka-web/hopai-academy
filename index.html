@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOP AI Academy</title>
+  <meta name="description" content="残業が多くて仕事が終わらない会社員向け。AIを使って業務をもっとラクに、もっと速く。HOP AI Academyの無料相談はこちら。" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      line-height: 1.8;
+      color: #222;
+      background: #f6f3fb;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      padding: 56px 0;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #f6f3fb 0%, #ffffff 100%);
+      padding: 72px 0 56px;
+    }
+
+    .eyebrow {
+      color: #7a3fd1;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 38px;
+      line-height: 1.35;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      color: #111;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 28px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      width: 100%;
+      max-width: 420px;
+      background: #06c755;
+      color: #fff;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 800;
+      padding: 18px 20px;
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(6, 199, 85, 0.22);
+    }
+
+    .cta-note {
+      font-size: 14px;
+      color: #777;
+      margin-top: 14px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 1.45;
+      font-weight: 800;
+      margin-bottom: 24px;
+      color: #111;
+    }
+
+    p {
+      font-size: 17px;
+      color: #444;
+    }
+
+    .lead {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .card-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 22px 20px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    .card strong {
+      display: block;
+      font-size: 19px;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .points {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .point {
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px 18px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      font-size: 17px;
+      color: #333;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .check-list li {
+      background: #fff;
+      padding: 18px 18px;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      font-size: 17px;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: #7a3fd1;
+      font-weight: 800;
+      margin-right: 10px;
+    }
+
+    .flow {
+      display: grid;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .flow-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #fff;
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+    }
+
+    .flow-num {
+      min-width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background: #7a3fd1;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .flow-text strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+
+    .faq-q {
+      font-weight: 800;
+      margin-bottom: 8px;
+      font-size: 18px;
+      color: #222;
+    }
+
+    .faq-a {
+      color: #555;
+      font-size: 16px;
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, #4d128f 0%, #7a3fd1 100%);
+      color: #fff;
+      text-align: center;
+      padding: 72px 0;
+    }
+
+    .final-cta h2 {
+      color: #fff;
+      margin-bottom: 18px;
+    }
+
+    .final-cta p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 28px;
+    }
+
+    .final-cta .cta-note {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .footer-space {
+      height: 100px;
+    }
+
+    .fixed-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(246, 243, 251, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 12px 14px 16px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+    }
+
+    .fixed-cta .cta-btn {
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+      font-size: 20px;
+      padding: 16px 18px;
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 56px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+      .hero-sub,
+      .lead,
+      p,
+      .point,
+      .check-list li {
+        font-size: 16px;
+      }
+
+      .cta-btn {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">完全無料・オンライン相談</div>
+      <h1>
+        残業が多くて、<br>
+        仕事が終わらない<br>
+        あなたへ。
+      </h1>
+      <p class="hero-sub">
+        AIを使って、今の仕事をもっとラクに、もっと速く。<br>
+        忙しい会社員向けに、実務で使えるAI活用をわかりやすく整理します。
+      </p>
+      <a class="cta-btn" href="https://lin.ee/7qwVXWz" target="_blank" rel="noopener noreferrer">LINEで無料相談する</a>
+      <div class="cta-note">30秒で完了・相談のみでもOK</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>こんな悩み、ありませんか？</h2>
+      <div class="card-list">
+        <div class="card"><strong>毎日忙しすぎる</strong><p>仕事に追われて、新しいことを学ぶ時間がなかなか取れない。</p></div>
+        <div class="card"><strong>AIが気になるけど後回し</strong><p>ChatGPTや生成AIがいいのは知っている。でも何から始めればいいかわからない。</p></div>
+        <div class="card"><strong>仕事でどう使うかわからない</strong><p>少し触ったことはあるけど、実務に落とし込めていない。</p></div>
+        <div class="card"><strong>このままでいいのか不安</strong><p>周りがAIを使い始める中で、自分だけ置いていかれそうで焦る。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#ffffff;">
+    <div class="container">
+      <h2>その悩み、AIで変えられます</h2>
+      <p class="lead">
+        HOP AI Academyでは、初心者でもすぐ使えるAI活用を、仕事ベースで整理します。
+      </p>
+      <div class="points">
+        <div class="point">ChatGPTの使い方を、実務で使える形で理解できる</div>
+        <div class="point">資料作成・メール・文章作成の時短につながる</div>
+        <div class="point">情報整理・要約・アイデア出しが速くなる</div>
+        <div class="point">何を独学し、何を相談すべきかが明確になる</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>無料相談でできること</h2>
+      <ul class="check-list">
+        <li>今の仕事のどこにAIを入れられるか整理できます</li>
+        <li>あなたに合う始め方と優先順位がわかります</li>
+        <li>今すぐ時短につながる活用イメージが見えます</li>
+        <li>独学でいけるか、サポートが必要か判断できます</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" style="background:#ffffff;">
+    <div class="container">
+      <h2>こんな方におすすめです</h2>
+      <ul class="check-list">
+        <li>忙しいけど、今のままではまずいと感じている会社員</li>
+        <li>AIに興味はあるが、まだ行動に移せていない方</li>
+        <li>ChatGPTを触っただけで止まっている方</li>
+        <li>業務効率化と将来のスキルアップを両立したい方</li>
+        <li>副業やキャリアアップにもAIを活かしたい方</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>相談までの流れ</h2>
+      <div class="flow">
+        <div class="flow-item">
+          <div class="flow-num">1</div>
+          <div class="flow-text">
+            <strong>LINEを追加</strong>
+            <p>まずは下のボタンから、HOP AI AcademyのLINEを追加してください。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">2</div>
+          <div class="flow-text">
+            <strong>悩みや状況を送る</strong>
+            <p>今の仕事の悩みや、AIで気になっていることを送ってください。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">3</div>
+          <div class="flow-text">
+            <strong>オンラインで無料相談</strong>
+            <p>内容をもとに、今の仕事にどうAIを使えるかを一緒に整理します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#ffffff;">
+    <div class="container">
+      <h2>よくある質問</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <div class="faq-q">Q. AI初心者でも大丈夫ですか？</div>
+          <div class="faq-a">はい。むしろ初心者向けです。難しい専門用語より、実務で使うことを優先して進めます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. ChatGPT無料版でも大丈夫ですか？</div>
+          <div class="faq-a">問題ありません。まずは無料版からでも十分始められます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. 売り込みはありますか？</div>
+          <div class="faq-a">無理な営業はしません。まずは現状整理だけでも大丈夫です。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. パソコンが得意ではありません。</div>
+          <div class="faq-a">問題ありません。今の業務に合わせて、無理なく使える形を前提にお話しします。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>仕事を変える第一歩は、<br>AIを学ぶことではなく、<br>仕事にどう使うか知ることです。</h2>
+      <p>まずは気軽に相談してください。</p>
+      <a class="cta-btn" href="https://lin.ee/7qwVXWz" target="_blank" rel="noopener noreferrer">LINEで無料相談する</a>
+      <div class="cta-note">30秒で完了・相談のみでもOK</div>
+    </div>
+  </section>
+
+  <div class="footer-space"></div>
+
+  <div class="fixed-cta">
+    <div class="container">
+      <a class="cta-btn" href="https://lin.ee/7qwVXWz" target="_blank" rel="noopener noreferrer">LINEで無料相談する</a>
+    </div>
+  </div>
+
+</body>
+</html>
